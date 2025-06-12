@@ -19,10 +19,15 @@ struct PokemonCard: View {
                     .clipShape(RoundedRectangle(cornerRadius: 10))
             }
             //Nombre
-            
+            Text(pokemon.nombre)
+                .bold()
+                .font(.title)
+                .foregroundStyle(Color(red: 28/255,green: 135/255,blue: 151/255))
             
             //Tipo
-            
+            Text(pokemon.tipo)
+                .font(.title2)
+                .foregroundStyle(Color(red: 28/255,green: 135/255,blue: 151/255))
             
         } //Fin del VStack
         .frame(width: 200, height: 200)

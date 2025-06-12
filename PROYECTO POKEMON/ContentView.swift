@@ -10,7 +10,9 @@ import SwiftUI
 struct ContentView: View {
     var screen = NSScreen.main!.visibleFrame
     //@State var searchText: String = ""
+    
     @State var pokemons: [PokemonModel] = []
+    @State var selectedPokemon: PokemonModel? = nil
     var gridColumns: [GridItem] = [
             GridItem(.flexible()),
             GridItem(.flexible()),
@@ -66,10 +68,19 @@ struct ContentView: View {
                     }//Botones contenido arriba
                     .padding(.top,11)
                     HStack{
-                                            }
+                        ScrollView {
+                                                    LazyVGrid(columns: gridColumns) {
+                                                        ForEach(pokemons) { pokemon in
+                                                            PokemonCard(pokemon: pokemon)
+                                                                .onTapGesture {
+                                                                    selectedPokemon = pokemon
+                                                                }
+                                                        }
+                                                    }
+                                                }                 }
                     .frame(width: 800, height: 450)
                     .padding()
-                    .background(Color.black)
+                    .background(LinearGradient(gradient: Gradient(colors: [Color(red: 244/255,green: 255/255,blue: 244/255), Color(red: 231/255,green: 255/255,blue: 223/255)]), startPoint: .topLeading, endPoint: .bottomTrailing))
                     .clipShape(RoundedRectangle(cornerRadius: 25))
 
                     Spacer()
@@ -121,6 +132,7 @@ struct ContentView: View {
                     VStack{
                         
                     }//Boton derecha
+                    
                 } //Botones inferiores
                 Spacer()
             }// Contenido
