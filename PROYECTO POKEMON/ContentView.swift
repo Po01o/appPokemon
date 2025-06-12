@@ -143,31 +143,52 @@ struct ContentView: View {
             .padding(30)
             .sheet(item: $selectedPokemon) { pokemon in
                 VStack{
-                    VStack {
-                        HStack {
-                         
+                    HStack {
+                        ZStack {
+                            Image("pasto")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 200, height: 150)
+                                .padding(.top, 140)
+                            
+                            AsyncImage(url: URL(string: pokemon.imagen)){ image in
+                                image.image?.resizable()
+                                    .scaledToFill()
+                                    .frame(width: 240, height: 240)
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                                    .padding(.bottom, 20)
+                                }
                         }
-                        HStack{
-                            Text("DESCRIPCION")
-                                .bold()
+                        .padding(.leading, 170)
+                        Spacer()
+                        VStack {
+                            //FALTAN NOMBRE Y TIPO
+                        }
+                        .padding(.trailing, 100)
+                    }
+                    HStack {
+                        Text("DESCRIPCION")
+                            .bold()
                                 .font(.title)
                                 .bold()
                                 .foregroundStyle(Color(red: 28/255,green: 135/255,blue: 151/255))
-                        
-                            HStack {
-                                Text(pokemon.descripcion)
-                                    .bold()
-                                    .font(.title3)
-                                    .foregroundStyle(Color(red: 28/255,green: 135/255,blue: 151/255))
-                            }
-                            .frame(width: .infinity, height: .infinity)
-                            .padding()
-                            .background(Color(red: 244/255,green: 255/255,blue: 244/255))
-                            .clipShape(RoundedRectangle(cornerRadius: 25))
-                            .padding(.leading, 10)
+                        HStack {
+                            Text(pokemon.descripcion)
+                                .bold()
+                                .font(.title3)
+                                .foregroundStyle(Color(red: 28/255,green: 135/255,blue: 151/255))
                         }
+                        .frame(width: .infinity, height: .infinity)
+                        .padding()
+                        .background(Color(red: 244/255,green: 255/255,blue: 244/255))
+                        .clipShape(RoundedRectangle(cornerRadius: 25))
+                        .padding(.leading, 10)
                     }
-                }
+                    .frame(width: 600)
+                    .padding(10)
+                    .background(LinearGradient(gradient: Gradient(colors: [Color(red: 194/255,green: 243/255,blue: 217/255), Color(red: 156/255,green: 219/255,blue: 165/255)]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                    .clipShape(RoundedRectangle(cornerRadius: 25))
+                }//Fin del Sheet
                 .frame(width: 800, height: 500)
                     .padding()
                     .background(LinearGradient(gradient: Gradient(colors: [Color(red: 244/255,green: 255/255,blue: 244/255), Color(red: 231/255,green: 255/255,blue: 223/255)]), startPoint: .topLeading, endPoint: .bottomTrailing))
