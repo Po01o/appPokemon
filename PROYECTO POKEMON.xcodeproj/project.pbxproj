@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,10 @@
 		F31640DD2E00DE5000A3C449 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F31640DC2E00DE5000A3C449 /* Assets.xcassets */; };
 		F31640E02E00DE5000A3C449 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F31640DF2E00DE5000A3C449 /* Preview Assets.xcassets */; };
 		F31640E92E00DEB800A3C449 /* botonesTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31640E82E00DEB800A3C449 /* botonesTop.swift */; };
+		F3360B382DFA8BAD005C5423 /* botonMas.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3360B372DFA8B9F005C5423 /* botonMas.swift */; };
+		F3360B3A2DFA8BC8005C5423 /* botonLargo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3360B392DFA8BC3005C5423 /* botonLargo.swift */; };
+		F3360B3C2DFA8C1A005C5423 /* pantalla.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3360B3B2DFA8C12005C5423 /* pantalla.swift */; };
+		F3360B402DFA8C69005C5423 /* PokemonCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3360B3F2DFA8C64005C5423 /* PokemonCards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +26,15 @@
 		F31640DF2E00DE5000A3C449 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F31640E12E00DE5000A3C449 /* PROYECTO_POKEMON.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PROYECTO_POKEMON.entitlements; sourceTree = "<group>"; };
 		F31640E82E00DEB800A3C449 /* botonesTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = botonesTop.swift; sourceTree = "<group>"; };
+		F3360B372DFA8B9F005C5423 /* botonMas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = botonMas.swift; sourceTree = "<group>"; };
+		F3360B392DFA8BC3005C5423 /* botonLargo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = botonLargo.swift; sourceTree = "<group>"; };
+		F3360B3B2DFA8C12005C5423 /* pantalla.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pantalla.swift; sourceTree = "<group>"; };
+		F3360B3F2DFA8C64005C5423 /* PokemonCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F3360B332DFA8ADC005C5423 /* models */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = models; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F31640D22E00DE4E00A3C449 /* Frameworks */ = {
@@ -54,6 +66,7 @@
 		F31640D72E00DE4E00A3C449 /* PROYECTO POKEMON */ = {
 			isa = PBXGroup;
 			children = (
+				F3360B332DFA8ADC005C5423 /* models */,
 				F31640E72E00DEA600A3C449 /* views */,
 				F31640D82E00DE4E00A3C449 /* PROYECTO_POKEMONApp.swift */,
 				F31640DA2E00DE4E00A3C449 /* ContentView.swift */,
@@ -75,6 +88,10 @@
 		F31640E72E00DEA600A3C449 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				F3360B3F2DFA8C64005C5423 /* PokemonCards.swift */,
+				F3360B3B2DFA8C12005C5423 /* pantalla.swift */,
+				F3360B392DFA8BC3005C5423 /* botonLargo.swift */,
+				F3360B372DFA8B9F005C5423 /* botonMas.swift */,
 				F31640E82E00DEB800A3C449 /* botonesTop.swift */,
 			);
 			path = views;
@@ -94,6 +111,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F3360B332DFA8ADC005C5423 /* models */,
 			);
 			name = "PROYECTO POKEMON";
 			productName = "PROYECTO POKEMON";
@@ -150,9 +170,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3360B3C2DFA8C1A005C5423 /* pantalla.swift in Sources */,
 				F31640DB2E00DE4E00A3C449 /* ContentView.swift in Sources */,
 				F31640D92E00DE4E00A3C449 /* PROYECTO_POKEMONApp.swift in Sources */,
+				F3360B402DFA8C69005C5423 /* PokemonCards.swift in Sources */,
+				F3360B382DFA8BAD005C5423 /* botonMas.swift in Sources */,
 				F31640E92E00DEB800A3C449 /* botonesTop.swift in Sources */,
+				F3360B3A2DFA8BC8005C5423 /* botonLargo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,12 @@ import SwiftUI
 struct ContentView: View {
     var screen = NSScreen.main!.visibleFrame
     //@State var searchText: String = ""
-    
+    @State var pokemons: [PokemonModel] = []
+    var gridColumns: [GridItem] = [
+            GridItem(.flexible()),
+            GridItem(.flexible()),
+            GridItem(.flexible())
+        ]
 
     var body: some View {
         VStack{
@@ -103,10 +108,14 @@ struct ContentView: View {
                 HStack{
                     VStack{
                         HStack{
-                                                    }//Botones izquierda arriba
+                            botonMas(color1: Color(red: 1/255,green: 4/255,blue: 2/255), color2: Color(red: 44/255,green: 44/255,blue: 44/255))
+                                                            .padding(.trailing, 30)
+                                                        botonLargo(color1: Color(red: 8/255,green: 64/255,blue: 53/255), color2: Color(red: 95/255,green: 196/255,blue: 128/255))
+                                                            .padding(.trailing, 30)
+                                                        botonLargo(color1: Color(red: 7/255,green: 49/255,blue: 102/255), color2: Color(red: 34/255,green: 196/255,blue: 234/255))                        }//Botones izquierda arriba
                         .padding(.top,50)
                         HStack {
-                                                    }//Pantalla izquierda abajo
+                            pantalla(color: Color(red: 95/255,green: 196/255,blue: 128/255))          }//Pantalla izquierda abajo
                         .padding(.top,40)
                     }//Botones izquierda
                     VStack{
@@ -130,7 +139,16 @@ struct ContentView: View {
     }
     
     func loadPokemons() async{
-        
+        let URL = URL(string: "https://pokedex-api-mfmdu.ondigitalocean.app/pokemon")
+                do{
+                    let (data, _) = try await URLSession.shared.data(from:URL!)
+                    let pokemonsDecoded = try JSONDecoder().decode([PokemonModel].self, from: data)
+                    
+                    pokemons = pokemonsDecoded
+                    print(pokemonsDecoded.count)
+                } catch let error {
+                    print(error)
+                }
     }
 
 }
