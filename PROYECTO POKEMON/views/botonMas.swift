@@ -25,3 +25,21 @@ struct botonMas: View {
         .clipShape(Circle())
     }
 }
+struct botonMas2: View {
+    var color1: Color
+    var color2: Color
+    var body: some View {
+        VStack{
+            VStack{}
+            .frame(width: 180, height: 180)
+            .background(color2)
+            .clipShape(Circle())
+            Spacer()
+        }
+        .padding(.top,2)
+        .padding(.leading,10)
+        .frame(width: 200, height: 200)
+        .background(color1)
+        .clipShape(Circle())
+    }
+}

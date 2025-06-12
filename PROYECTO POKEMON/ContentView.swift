@@ -130,7 +130,8 @@ struct ContentView: View {
                         .padding(.top,40)
                     }//Botones izquierda
                     VStack{
-                        
+                        botonMas2(color1: Color(red: 1/255,green: 4/255,blue: 2/255), color2: Color(red: 44/255,green: 44/255,blue: 44/255))
+                                                    .padding(.leading, 70)
                     }//Boton derecha
                     
                 } //Botones inferiores
@@ -140,6 +141,38 @@ struct ContentView: View {
             .background(Color(red: 227/255,green: 51/255,blue: 97/255).opacity(0.5))
             .clipShape(RoundedRectangle(cornerRadius: 40))
             .padding(30)
+            .sheet(item: $selectedPokemon) { pokemon in
+                VStack{
+                    VStack {
+                        HStack {
+                         
+                        }
+                        HStack{
+                            Text("DESCRIPCION")
+                                .bold()
+                                .font(.title)
+                                .bold()
+                                .foregroundStyle(Color(red: 28/255,green: 135/255,blue: 151/255))
+                        
+                            HStack {
+                                Text(pokemon.descripcion)
+                                    .bold()
+                                    .font(.title3)
+                                    .foregroundStyle(Color(red: 28/255,green: 135/255,blue: 151/255))
+                            }
+                            .frame(width: .infinity, height: .infinity)
+                            .padding()
+                            .background(Color(red: 244/255,green: 255/255,blue: 244/255))
+                            .clipShape(RoundedRectangle(cornerRadius: 25))
+                            .padding(.leading, 10)
+                        }
+                    }
+                }
+                .frame(width: 800, height: 500)
+                    .padding()
+                    .background(LinearGradient(gradient: Gradient(colors: [Color(red: 244/255,green: 255/255,blue: 244/255), Color(red: 231/255,green: 255/255,blue: 223/255)]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                    .clipShape(RoundedRectangle(cornerRadius: 25))
+                }
             
         } //Fin del VStack
         .frame(width: screen.width/2.3, height: screen.height)
