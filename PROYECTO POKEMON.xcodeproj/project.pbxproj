@@ -16,6 +16,7 @@
 		F3360B3A2DFA8BC8005C5423 /* botonLargo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3360B392DFA8BC3005C5423 /* botonLargo.swift */; };
 		F3360B3C2DFA8C1A005C5423 /* pantalla.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3360B3B2DFA8C12005C5423 /* pantalla.swift */; };
 		F3360B402DFA8C69005C5423 /* PokemonCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3360B3F2DFA8C64005C5423 /* PokemonCards.swift */; };
+		F3360B422DFA9F36005C5423 /* recuadro.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3360B412DFA9F30005C5423 /* recuadro.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F3360B392DFA8BC3005C5423 /* botonLargo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = botonLargo.swift; sourceTree = "<group>"; };
 		F3360B3B2DFA8C12005C5423 /* pantalla.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pantalla.swift; sourceTree = "<group>"; };
 		F3360B3F2DFA8C64005C5423 /* PokemonCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCards.swift; sourceTree = "<group>"; };
+		F3360B412DFA9F30005C5423 /* recuadro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recuadro.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -88,6 +90,7 @@
 		F31640E72E00DEA600A3C449 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				F3360B412DFA9F30005C5423 /* recuadro.swift */,
 				F3360B3F2DFA8C64005C5423 /* PokemonCards.swift */,
 				F3360B3B2DFA8C12005C5423 /* pantalla.swift */,
 				F3360B392DFA8BC3005C5423 /* botonLargo.swift */,
@@ -173,6 +176,7 @@
 				F3360B3C2DFA8C1A005C5423 /* pantalla.swift in Sources */,
 				F31640DB2E00DE4E00A3C449 /* ContentView.swift in Sources */,
 				F31640D92E00DE4E00A3C449 /* PROYECTO_POKEMONApp.swift in Sources */,
+				F3360B422DFA9F36005C5423 /* recuadro.swift in Sources */,
 				F3360B402DFA8C69005C5423 /* PokemonCards.swift in Sources */,
 				F3360B382DFA8BAD005C5423 /* botonMas.swift in Sources */,
 				F31640E92E00DEB800A3C449 /* botonesTop.swift in Sources */,

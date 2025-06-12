@@ -162,7 +162,9 @@ struct ContentView: View {
                         .padding(.leading, 170)
                         Spacer()
                         VStack {
-                            //FALTAN NOMBRE Y TIPO
+                            recuadro(nombre: "NOMBRE", valor: pokemon.nombre)
+                                .padding(.bottom, 30)
+                            recuadro(nombre: "TIPO", valor: pokemon.tipo)
                         }
                         .padding(.trailing, 100)
                     }
